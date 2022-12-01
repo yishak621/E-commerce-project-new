@@ -1,0 +1,36 @@
+/*DARK THEME*/
+:root {
+  --clr-bcg: #fff;
+  --clr-font: #282c35;
+  --clr-primary: #d23669;
+  --clr-grey: #64748b;
+}
+
+.dark-theme {
+  --clr-bcg: #00030a;
+  --clr-font: #fff;
+  --clr-primary: #ffa7c4;
+  --clr-grey: #cbd5e1;
+}
+html {
+  background-color: var(--clr-bcg);
+  transition: background 1s;
+}
+body {
+  color: var(--clr-font);
+}
+.dark-theme .list-item > a {
+  color: #cbd5e1;
+}
+.dark-theme .list-item > a:hover {
+  color: var(--clr-primary);
+}
+.dark-theme .product-text > h2 {
+  color: var(--clr-font);
+}
+.dark-theme .product-text > p {
+  color: var(--clr-grey);
+}
+.dark-theme .old__price {
+  color: #d23669;
+}

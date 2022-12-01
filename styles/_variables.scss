@@ -1,0 +1,35 @@
+/*variables*/
+
+$transition: all 0.3s linear;
+$spacing: 0.25rem;
+$radius: 0.5rem;
+$light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+$max-width: 1170px;
+$fixed-width: 620px;
+/*### Primary*/
+$color-orange: hsl(26, 100%, 55%);
+$color-hover: hsl(26, 100%, 74%);
+$color-pale-orange: hsl(25, 100%, 94%);
+/*### Neutral*/
+$color-very-dark-blue: hsl(220, 13%, 13%);
+$color-dark-grayish-blue: hsl(219, 9%, 45%);
+$color-light-grayish-blue: hsl(223, 64%, 98%);
+$color-white: hsl(0, 0%, 100%);
+$color-black: hsl(0, 0%, 0%); /* (with 75% opacity for lightbox background)*/
+$color-black-modal: hsl(0, 0%, 0%, 0.75);
+/*additiona colors*/
+$clr-white: #fff;
+$clr-red-dark: hsl(360, 67%, 44%);
+$clr-red-light: hsl(360, 71%, 66%);
+$clr-green-dark: hsl(125, 67%, 44%);
+$clr-green-light: hsl(125, 71%, 66%);
+$clr-black: #222;
+/*basic properties*/
+$transition: all 0.3s linear;
+$spacing: 0.1rem;
+$radius: 0.75rem;
+$light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+$max-width: 1170px;
+$fixed-width: 620px;

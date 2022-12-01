@@ -1,0 +1,136 @@
+.collection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 50vh;
+  background-color: #ffe53b;
+  background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+
+  overflow: visible;
+}
+
+.collection {
+  h1 {
+    font-family: 'Nerko One', cursive;
+    color: #fff;
+    text-align: left;
+    margin-left: 3rem;
+    font-size: 3rem;
+  }
+}
+/*parent container*/
+.card-group {
+  margin: auto;
+}
+.card-group,
+.card {
+  aspect-ratio: 5/7;
+  cursor: pointer;
+  background-color: aliceblue;
+  transform: translateX(50%);
+}
+.card-group,
+.big-card {
+  width: 30vmin;
+}
+.card {
+  aspect-ratio: 5/7;
+  position: absolute;
+  transition: transform 800ms cubic-bezier(0.05, 0.43, 0.25, 0.95);
+
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+/*big cards*/
+.big-card {
+  width: 30vmin;
+  border-radius: 1vmin;
+}
+/*little cards*/
+.little-card {
+  width: 12vmin;
+  border-radius: 2vmin;
+  left: 55%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/*default position*/
+.big-card:nth-child(2) {
+  transform: translateX(-10%) rotate(-1deg);
+  background-image: url('/image/1535.png');
+  background-color: green;
+}
+.big-card:nth-child(4) {
+  transform: rotate(2deg);
+  background-image: url('/image/26263-3-nike-shoes-transparent-image-thumb.png');
+  background-color: yellow;
+}
+.big-card:nth-child(6) {
+  transform: translateX(-6%) rotate(-3deg);
+  background-image: url('/image/70-703345_our-brands-lakhani-shoes-price-1000-to-1500.png');
+  background-color: red;
+}
+.big-card:nth-child(8) {
+  transform: translate(10%, 3%) rotate(5deg);
+  background-image: url('/image/466-4661121_champion-mid-cut-shoe-rebound-mesh-new-black.png');
+  background-color: blue;
+}
+
+/*card group-hover*/
+/*NOTE -x-axis to the left -ve sign and for y-axis to the top -ve sign*/
+.card-group:hover > .big-card:nth-child(2) {
+  transform: translate(-75%, 16%) rotate(-24deg);
+}
+.card-group:hover > .big-card:nth-child(4) {
+  transform: translate(-25%, 8%) rotate(-8deg);
+}
+.card-group:hover > .big-card:nth-child(6) {
+  transform: translate(25%, 8%) rotate(8deg);
+}
+.card-group:hover > .big-card:nth-child(8) {
+  transform: translate(75%, 16%) rotate(24deg);
+}
+/*little cards*/
+.card-group:hover > .little-card:nth-child(1) {
+  transform: translate(200%, -160%) rotate(-15deg);
+}
+.card-group:hover > .little-card:nth-child(3) {
+  transform: translate(160%, 170%) rotate(15deg);
+}
+.card-group:hover > .little-card:nth-child(5) {
+  transform: translate(-200%, -160%) rotate(15deg);
+}
+.card-group:hover > .little-card:nth-child(7) {
+  transform: translate(-280%, 170%) rotate(-15deg);
+}
+
+/*little cards*/
+.little-card:nth-child(1) {
+  background-image: url('/image/transparent.png');
+  background-color: rgb(3, 45, 255);
+}
+.little-card:nth-child(3) {
+  background-image: url('/image/26263-3-nike-shoes-transparent-image-thumb.png');
+  background-color: rgb(3, 255, 171);
+}
+.little-card:nth-child(5) {
+  background-image: url('/image/transparent2.png');
+  background-color: rgb(174, 118, 127);
+}
+.little-card:nth-child(7) {
+  background-image: url('/image/70-703345_our-brands-lakhani-shoes-price-1000-to-1500.png');
+  background-color: rgb(0, 187, 255);
+}
+
+@media screen and (max-width: 889px) {
+  .collection {
+    grid-template-columns: auto;
+    grid-template-rows: 0.3fr 0.8fr;
+    height: 70vh;
+    text-align: center;
+    h1 {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-left: 0;
+    }
+  }
+}

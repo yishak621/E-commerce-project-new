@@ -1,0 +1,175 @@
+/*MODAL*/ //
+.open-modal {
+  z-index: 10;
+  visibility: visible;
+  transform: scale(1);
+}
+.close-modal {
+  z-index: -10;
+  visibility: hidden;
+  transform: scale(0);
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $color-black-modal;
+  display: grid;
+  place-items: center;
+
+  transition: all 0.3s linear;
+}
+.modal-images {
+  display: grid;
+  grid-template-columns: 26rem;
+  grid-template-rows: 80% 20%;
+  max-height: 85vh;
+  position: relative;
+
+  .small-img {
+    position: fixed;
+    bottom: 5rem;
+    margin: auto;
+    margin-left: 1.5rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .image-wrapper {
+      width: 4.5rem;
+      height: 4.5rem;
+      overflow: hidden;
+      object-fit: cover;
+      border-radius: 0.5rem;
+      margin: auto 0.5rem;
+      cursor: pointer;
+
+      position: relative;
+      &:hover {
+        border: 2px solid $color-orange;
+        &::after {
+          content: '';
+          width: 100%;
+          height: 100%;
+
+          top: 0;
+          left: 0;
+          position: absolute;
+          background: #fff;
+          z-index: 1;
+          opacity: 0.5;
+          transition: all 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        }
+      }
+    }
+  }
+}
+.modal-gallery {
+  width: 26rem;
+  height: 25rem;
+  margin-bottom: 8rem;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.8rem;
+  }
+}
+@media screen and (max-width: 894px) {
+  .modal {
+    display: none;
+  }
+}
+
+/*MODAL*/ //
+.open-modal {
+  z-index: 10;
+  visibility: visible;
+  transform: scale(1);
+}
+.close-modal {
+  z-index: -10;
+  visibility: hidden;
+  transform: scale(0);
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $color-black-modal;
+  display: grid;
+  place-items: center;
+
+  transition: all 0.3s linear;
+}
+.modal-images {
+  display: grid;
+  grid-template-columns: 26rem;
+  grid-template-rows: 80% 20%;
+  max-height: 85vh;
+  position: relative;
+
+  .small-img {
+    position: fixed;
+    bottom: 5rem;
+    margin: auto;
+    margin-left: 1.5rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .image-wrapper {
+      width: 4.5rem;
+      height: 4.5rem;
+      overflow: hidden;
+      object-fit: cover;
+      border-radius: 0.5rem;
+      margin: auto 0.5rem;
+      cursor: pointer;
+
+      position: relative;
+      &:hover {
+        border: 2px solid $color-orange;
+        &::after {
+          content: '';
+          width: 100%;
+          height: 100%;
+
+          top: 0;
+          left: 0;
+          position: absolute;
+          background: #fff;
+          z-index: 1;
+          opacity: 0.5;
+          transition: all 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+        }
+      }
+    }
+  }
+}
+.modal-gallery {
+  width: 26rem;
+  height: 25rem;
+  margin-bottom: 8rem;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.8rem;
+  }
+}
+@media screen and (max-width: 894px) {
+  .modal {
+    display: none;
+  }
+}

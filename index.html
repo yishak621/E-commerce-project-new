@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>yishak abrham | E-commerce product page</title>
+    <!--styles-->
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/darkmode.css" />
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header id="nav">
+      <section id="home">
+        <nav >
+          <!--navbar-->
+          <div class="nav-bar">
+            <i><img class="menu__icon" src="/images/icon-menu.svg" alt="" /></i>
+            <picture class="logo"
+              ><img src="/images/logo.svg" alt="logo" />
+            </picture>
+            <div class="nav-list">
+              <ul class="list">
+                <button class="icon-btn close-icon">
+                  <i class="fas fa-times"></i>
+                </button>
+                <li class="list-item"><a href="#collections" class="scroll-link">collections</a></li>
+                <li class="list-item"><a href="#men" class="scroll-link">men</a></li>
+                <li class="list-item"><a href="#women" class="scroll-link">women</a></li>
+                <li class="list-item"><a href="#about" class="scroll-link">about</a></li>
+                <li class="list-item"><a href="#contact" class="scroll-link">contact</a></li>
+              </ul>
+              <div class="black-background"></div>
+            </div>
+          </div>
+          <div class="nav-icon">
+            <!--dark mode-->
+            <button class="dark-btn">
+              <i class="fa-sharp fa-solid fa-sun"></i>
+              <i class="fa-solid fa-circle-notch"></i>
+              <i class="fa-regular fa-moon"></i>
+            </button>
+            <div class="cart-wrapper">
+              <button class="icon-btn nav-cart-btn">
+                <i
+                  ><img src="./images/icon-cart - Copy.svg" alt="cart" />
+                  <span class="notification" data-value="0">0</span>
+                </i>
+              </button>
+
+              <!--card items display-->
+              <div class="cart-card">
+                <h2 class="cart">Cart</h2>
+
+                <hr />
+                <p class="emptyText">Your cart is empty</p>
+                <!--alert message-->
+                <p class="alert"></p>
+                <!--filled by js-->
+
+                <button class="btn btn-checkout">Checkout</button>
+              </div>
+            </div>
+
+            <div class="avatar__img">
+              <img src="/images/image-avatar.png" alt="avatar" />
+            </div>
+          </div>
+        </nav>
+        <hr />
+      </section>
+    </header>
+
+    <main>
+      <!--main section -->
+
+      <!--collection section-->
+      <section id="collections">
+        <h1 class="section-title">Collection</h1>
+        <div class="collection">
+         <div class="text-content">
+<h1>The number one shoe brand shopping website...feel free to order online</h1>
+         </div>
+        <div class="card-group"> 
+         <div class="little-card card"></div>
+            <div class="big-card card"></div>
+               <div class="little-card card"></div>
+            <div class="big-card card"></div>
+            <div class="little-card card"></div>
+            <div class="big-card card"></div>
+            <div class="little-card card"></div>
+            <div class="big-card card"></div>
+          </div>
+        </div>
+  
+        </div>
+         
+      </section>
+
+      <!--men section-->
+      <section id="men">
+        <h1 class="section-title">Men shoes</h1>
+        <div class="men-section">
+          <!--filled by js-->
+        </div>
+      </section>
+      <section id="women">
+
+        <!--women section-->
+        <h1 class="section-title">women shoes</h1>
+        <div class="women-section"><!--filled by js--></div>
+      </section>
+
+      <!--checkout card-->
+      <div class="checkout-wrapper ">
+       
+          <button class="checkout-close-btn">
+            <i class="fas fa-times"></i>
+          </button>
+         
+<div class="checkout-content">
+        <img src="./logo.svg" alt="" />
+        <p>checkout > payment</p>
+        <div class="express">
+          <p>Express checkout</p>
+          <div class="logos-checkout">
+            <img src="./pay/shoppay.png" alt="shoppay" />
+            <img src="./pay/amazon.png" alt="amazon" />
+            <img src="./pay/apple.png" alt="apple" />
+            <img src="./pay/images.png" alt="paypal" />
+          </div>
+        </div>
+        <span class="lines">
+         
+          <p class="text-one">----or continue below to pay with a credit card----</p>
+         
+        </span>
+        <div class="flex-one">
+          <label for="email">Contact information</label>
+          <span class="text-two"
+            >Already have an account? <a href="#">Log in</a></span
+          >
+        </div>
+        <input type="email" placeholder="Email" class="email-input" />
+        <span class="email-me"
+          ><input type="checkbox" class="checkbox" /> Email me with news and
+          offers</span
+        >
+        <form action="POST">
+          <h1 class="shipping-title">Shipping address</h1>
+          <div class="form-name">
+            <input
+              type="text"
+              placeholder="First name"
+              id="first-name"
+              class="input"
+            />
+            <input
+              type="text"
+              placeholder="Last name"
+              id="Last-name"
+              class="input"
+            />
+          </div>
+          <input
+            type="text"
+            id="company"
+            placeholder="Company(required for buissness addresses)"
+            class="input"
+          />
+          <input type="text" placeholder="Address" id="Address" class="input" />
+          <input
+            type="text"
+            placeholder="Apartment[optional]"
+            id="apartment"
+            class="input"
+          />
+          <input type="text" placeholder="City" id="city" class="input" />
+          <div class="dropdown-form">
+            <span class="select"
+              ><label class="select-label" for="country">Country/Region </label
+              ><select name="countries" id="countries">
+                <option>ethiopia</option>
+              </select></span
+            >
+            <input type="text" placeholder="State" class="input" />
+            <input type="text" placeholder="ZIP code" class="input" />
+          </div>
+          <input type="number" placeholder="Phone(optional)" class="input" />
+        </form>
+        <div class="input-btn"><button>continue to shipping</button></div>
+      </div>
+      <picture>
+        <img src="./phone.svg" alt="" />
+      </picture>
+
+         
+     
+      </div>
+
+      <!--modal-->
+      <div class="modal close-modal">
+        <div class="modal-images">
+          <button class="icon-btn close-btn modal-close-btn">
+            <i class="fas fa-times"></i>
+          </button>
+          <!-- prev next buttons -->
+          <button class="icon-btn prev-btn modal-prev-btn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="icon-btn next-btn modal-next-btn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <!--Modal Main img-->
+          <picture class="modal-gallery">
+            <img
+              src="/images/image-product-1.jpg"
+              alt="product"
+              class="modal-img selected"
+            />
+          </picture>
+          <div class="small-img modal-small-img">
+            <!--filled by js-->
+          </div>
+        </div>
+      </div>
+    </main>
+    <button class="top-link"><a href="#"><i class="fa-solid fa-chevron-up"></i> </a></button>
+    <!--scripts-->
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
