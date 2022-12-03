@@ -8,8 +8,9 @@ import Card from './module/card.js';
 
 import toggleBtn from './module/darkmode.js';
 import { menArray, womenArray } from './module/data.js';
-import window from './module/checkout.js';
+import { scroll } from './module/fixedNavBar.js';
 import newwindow from './module/fixedNavBar.js';
+
 //Declaration
 const menu = getElement('.menu__icon');
 const navList = getElement('.nav-list');
@@ -18,12 +19,12 @@ const closeBtn = getElement('.close-icon');
 
 const navCartBtn = getElement('.nav-cart-btn');
 const cartCard = getElement('.cart-card');
-
 const btnCheckout = getElement('.btn-checkout');
 //Event listner for menu and close btn
 menu.addEventListener('click', () => {
   navList.classList.add('nav-slide');
 });
+
 closeBtn.addEventListener('click', () => {
   navList.classList.remove('nav-slide');
 });
@@ -37,16 +38,15 @@ window.addEventListener('resize', function () {
 });
 
 //event listner for navCartBtn
-
 navCartBtn.addEventListener('click', () => {
-  cartCard.classList.toggle('open');
+  cartCard.classList.toggle('open-cart');
 });
 //CHECKOUT ITEM
-
 const cart = getElement('.cart');
 const checkoutCloseBtn = getElement('.checkout-close-btn');
 const checkoutWrapper = getElement('.checkout-wrapper');
 const navbar = document.getElementById('nav');
+
 btnCheckout.addEventListener('click', function () {
   //cart.innerHTML = `<span class="alert__success">your order is successfull </span>`;
   checkoutWrapper.classList.add('show');
@@ -62,10 +62,6 @@ const avatarImg = getElement('.avatar__img');
 avatarImg.addEventListener('click', function () {
   avatarImg.classList.toggle('active');
 });
-
-// //invoking
-// const cardDisplay = new Card(getElement('.para-one'));
-// const cardDisplayOne = new Card(getElement('.para-two'));
 
 //Dynamically adding items
 const menSection = getElement('.men-section');
@@ -90,7 +86,7 @@ function iterateOverArray(section, array) {
 
       return `
   <!--start of single article-->
-<article class="main-section">
+<article class="main-section" >
   <div class="${blockname}">
     <!-- prev next buttons -->
     <button class="icon-btn prev-btn prev-mob">
@@ -257,3 +253,9 @@ const cardDisplayGirlOne = new Card(getElement('.para-girl-one'));
 const cardDisplayGirlTwo = new Card(getElement('.para-girl-two'));
 const cardDisplayGirlThree = new Card(getElement('.para-girl-three'));
 const cardDisplayGirlFour = new Card(getElement('.para-girl-four'));
+
+//page loading gif
+const loading = getElement('.page-loading');
+window.addEventListener('load', function () {
+  loading.style.display = 'none';
+});

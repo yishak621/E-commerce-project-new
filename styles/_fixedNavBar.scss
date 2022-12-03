@@ -21,22 +21,25 @@
 }
 
 .top-link {
-  font-size: 1.25rem;
   position: fixed;
   bottom: 3rem;
   right: 3rem;
-  background: var(--clr-secondary);
-  padding: 0.3rem 0.4rem;
+
   display: grid;
   place-items: center;
-  border-radius: var(--radius);
+
+  font-size: 1.25rem;
+  padding: 0.3rem 0.4rem;
+  border-radius: 50%;
+
+  background: var(--clr-secondary);
   color: var(--clr-white);
+  border-color: green;
+
   animation: up 3s ease-in-out infinite;
   visibility: hidden;
   z-index: -100;
   cursor: pointer;
-  border-radius: 50%;
-  border-color: green;
 }
 .show-link {
   visibility: visible;
@@ -48,6 +51,7 @@
   top: 0;
   left: 0;
   width: 100%;
+
   background: $clr-white;
   box-shadow: $light-shadow;
   transition: all 0.5s;

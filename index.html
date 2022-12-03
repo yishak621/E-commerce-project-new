@@ -34,6 +34,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
+    <!--Animate on scroll-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <header id="nav">
@@ -43,18 +45,19 @@
           <div class="nav-bar">
             <i><img class="menu__icon" src="/images/icon-menu.svg" alt="" /></i>
             <picture class="logo"
-              ><img src="/images/logo.svg" alt="logo" />
+              ><img src="/images/logo.svg" class="logo-day-mode" alt="logo" />
+              <img src="/logo-night.svg" class="logo-night-mode hide-logo" alt="">
             </picture>
             <div class="nav-list">
               <ul class="list">
                 <button class="icon-btn close-icon">
                   <i class="fas fa-times"></i>
                 </button>
-                <li class="list-item"><a href="#collections" class="scroll-link">collections</a></li>
-                <li class="list-item"><a href="#men" class="scroll-link">men</a></li>
-                <li class="list-item"><a href="#women" class="scroll-link">women</a></li>
-                <li class="list-item"><a href="#about" class="scroll-link">about</a></li>
-                <li class="list-item"><a href="#contact" class="scroll-link">contact</a></li>
+                <li class="list-item"><a href="#collections" class="scroll-link"><i class="fa-solid fa-star fa-fw"></i> collections</a></li>
+                <li class="list-item"><a href="#men" class="scroll-link"><i class="fa-solid fa-person fa-fw"></i> men</a></li>
+                <li class="list-item"><a href="#women" class="scroll-link"><i class="fa-solid fa-person-dress fa-fw"></i> women</a></li>
+                <li class="list-item"><a href="#about" class="scroll-link"><i class="fa-sharp fa-solid fa-address-card fa-fw"></i> about</a></li>
+                <li class="list-item"><a href="#contact" class="scroll-link"><i class="fa-solid fa-id-badge fa-fw"></i> contact</a></li>
               </ul>
               <div class="black-background"></div>
             </div>
@@ -66,11 +69,12 @@
               <i class="fa-solid fa-circle-notch"></i>
               <i class="fa-regular fa-moon"></i>
             </button>
+            <!--cart-->
             <div class="cart-wrapper">
               <button class="icon-btn nav-cart-btn">
                 <i
                   ><img src="./images/icon-cart - Copy.svg" alt="cart" />
-                  <span class="notification" data-value="0">0</span>
+                  <span class="notification" >0</span>
                 </i>
               </button>
 
@@ -96,10 +100,8 @@
         <hr />
       </section>
     </header>
-
+<!--main section -->
     <main>
-      <!--main section -->
-
       <!--collection section-->
       <section id="collections">
         <h1 class="section-title">Collection</h1>
@@ -144,8 +146,8 @@
             <i class="fas fa-times"></i>
           </button>
          
-<div class="checkout-content">
-        <img src="./logo.svg" alt="" />
+<div class="checkout-content" >
+        <img src="./logo-night.svg" alt="" />
         <p>checkout > payment</p>
         <div class="express">
           <p>Express checkout</p>
@@ -219,9 +221,6 @@
       <picture>
         <img src="./phone.svg" alt="" />
       </picture>
-
-         
-     
       </div>
 
       <!--modal-->
@@ -252,7 +251,15 @@
       </div>
     </main>
     <button class="top-link"><a href="#"><i class="fa-solid fa-chevron-up"></i> </a></button>
+    <!--page loading-->
+    <div class="page-loading">
+      <img src="./images/load.gif" alt="">
+    </div>
     <!--scripts-->
     <script type="module" src="/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  AOS.init();
+</script>
   </body>
 </html>

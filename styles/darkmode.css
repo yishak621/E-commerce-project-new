@@ -34,3 +34,63 @@ body {
 .dark-theme .old__price {
   color: #d23669;
 }
+.dark-theme #nav {
+  background-color: var(--clr-bcg);
+}
+.dark-theme .cart-card > h2,
+.emptyText {
+  color: #00030a;
+}
+/*dark btn*/
+.dark-btn {
+  padding: 0.25rem 0.3rem;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  font-weight: bold;
+
+  background: #890606;
+  color: #ffffff;
+  border-color: transparent;
+
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.dark-btn > i {
+  transition: all 1s ease-in-out;
+}
+
+.dark-theme .dark-btn {
+  background-color: #fff;
+  color: black;
+}
+.fa-sun {
+  opacity: 0;
+}
+
+.fa-circle-notch {
+  transform: translateX(-15px);
+}
+.move_sun {
+  opacity: 1;
+  transform: rotate(360deg);
+}
+.move_circle {
+  transform: translateX(15px);
+}
+.move_moon {
+  opacity: 0;
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 960px) {
+  .dark-btn {
+    transform: scale(0.8);
+  }
+}
+.hide-logo {
+  display: none;
+}
+.open-logo {
+  display: block;
+}
