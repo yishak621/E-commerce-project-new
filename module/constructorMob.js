@@ -60,7 +60,7 @@ class Gallery {
                       class="selected"
                       src="${currentImgSrc}"
                       alt="product-${input}"
-                      id="${input}"
+                      data-id="${input}"
                     />`;
         return gallery;
       }

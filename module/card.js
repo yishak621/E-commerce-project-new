@@ -1,6 +1,7 @@
 import getElement from './getElement.js';
-//constructor function for card
+import { setStore, getStore } from './localStorage.js';
 
+//constructor function for card
 class Card {
   constructor(element) {
     this.container = element;
@@ -18,7 +19,7 @@ class Card {
 
     const cartCard = document.querySelector('.cart-card');
     const emptyText = document.querySelector('.emptyText');
-    let notifyValue = parseInt(notification.dataset.value);
+    let notifyValue = parseInt(notification.textContent);
 
     addCartBtn.forEach((cartBtn) => {
       cartBtn.addEventListener('click', () => {
@@ -26,7 +27,6 @@ class Card {
         emptyText.style.display = 'none'; //removing the text
         notifyValue++;
         notification.textContent = notifyValue;
-        console.log(notifyValue);
       });
     });
     //event listener for add to cart btn
@@ -70,7 +70,7 @@ class Card {
       this.deleteBtn.forEach((deleteBtn) => {
         deleteBtn.addEventListener('click', (e) => {
           notifyValue--;
-          console.log(notifyValue);
+
           notification.textContent = notifyValue;
           const element = e.currentTarget.parentElement; //removing the elment
 

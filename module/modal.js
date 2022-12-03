@@ -21,7 +21,9 @@ class Modalgallery {
     this.nextImage = this.nextImage.bind(this);
     this.prevImage = this.prevImage.bind(this);
     this.clickImage = this.clickImage.bind(this);
+
     const navbar = document.getElementById('nav');
+
     //container event listner
     this.container.addEventListener(
       'click',
@@ -45,12 +47,13 @@ class Modalgallery {
   //OPEN MODAL function
   openModal = function (selectedImage, list) {
     this.setMainImg(selectedImage);
+
     this.modalSmall.innerHTML = list
       .map((image) => {
         return `<div class="${
           selectedImage.dataset.id === image.dataset.id
             ? 'image-wrapper selected'
-            : 'image-wrapper'
+            : 'image-wrapper '
         } ">
         <img
                 src="${image.src}"
@@ -60,7 +63,7 @@ class Modalgallery {
               /></div>`;
       })
       .join('');
-    console.log(this.modalSmall.innerHTML);
+
     //opening the modal
     this.modal.classList.remove('close-modal');
     this.modal.classList.add('open-modal');
