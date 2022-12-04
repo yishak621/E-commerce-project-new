@@ -1287,8 +1287,9 @@ input[type=number] {
   border-radius: 0.5rem;
 }
 .collection h1 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   text-align: left;
+  line-height: 1.2;
   color: rgb(252, 252, 252);
   margin-left: 3rem;
 }
@@ -1428,8 +1429,9 @@ input[type=number] {
   }
   .collection h1 {
     text-align: center;
-    font-size: 2.3rem;
+    font-size: 1.8rem;
     margin: auto 2rem;
+    line-height: 1.4;
   }
 }
 @-webkit-keyframes up {
