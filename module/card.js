@@ -28,10 +28,12 @@ class Card {
 
     addCartBtn.forEach((cartBtn) => {
       cartBtn.addEventListener('click', () => {
-        notification.classList.add('open');
-        emptyText.style.display = 'none'; //removing the text
-        notifyValue++;
-        notification.textContent = notifyValue;
+        if (value.textContent > 0) {
+          notification.classList.add('open');
+          emptyText.style.display = 'none'; //removing the text
+          notifyValue++;
+          notification.textContent = notifyValue;
+        }
       });
     });
     //event listener for add to cart btn
@@ -40,12 +42,12 @@ class Card {
       const calc1 = newOffer.dataset.value;
       const calc2 = value.textContent;
       const result = calc1 * calc2;
+      if (value.textContent > 0) {
+        //create elment
+        const cartElement = document.createElement('div');
+        cartElement.classList.add('cart-price');
 
-      //create elment
-      const cartElement = document.createElement('div');
-      cartElement.classList.add('cart-price');
-
-      cartElement.innerHTML = ` <img
+        cartElement.innerHTML = ` <img
                     class="cart-price-img"
                     src="${this.thumbNailSrc}"
                     alt=""
@@ -66,9 +68,10 @@ class Card {
                   </button>
                    `;
 
-      // <!--TODO: Append child-in between the horiontal row and checkout btn
-      //parentElement.insertBefore(newElement, parentElement.children[2]);
-      cartCard.insertBefore(cartElement, cartCard.children[2]);
+        // <!--TODO: Append child-in between the horiontal row and checkout btn
+        //parentElement.insertBefore(newElement, parentElement.children[2]);
+        cartCard.insertBefore(cartElement, cartCard.children[2]);
+      }
 
       //DELETE ITEM-since i can acess these after it is dynamically added to the DOM
       this.deleteBtn = document.querySelectorAll('.icon-delete');

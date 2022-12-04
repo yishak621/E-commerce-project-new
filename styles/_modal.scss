@@ -88,3 +88,11 @@
     display: none;
   }
 }
+/* when a screen rotation enabled */
+@media all and (orientation: landscape) {
+  .modal-images {
+    .small-img {
+      bottom: 0.5rem;
+    }
+  }
+}

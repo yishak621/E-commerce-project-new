@@ -1,3 +1,4 @@
+@import url('./_variables.scss');
 /*DARK THEME*/
 :root {
   --clr-bcg: #fff;
@@ -49,7 +50,7 @@ body {
   text-transform: capitalize;
   font-weight: bold;
 
-  background: #890606;
+  background: hsl(26, 100%, 55%);
   color: #ffffff;
   border-color: transparent;
 

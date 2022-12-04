@@ -866,6 +866,12 @@ hr {
     display: none;
   }
 }
+/* when a screen rotation enabled */
+@media all and (orientation: landscape) {
+  .modal-images .small-img {
+    bottom: 0.5rem;
+  }
+}
 /*CART CARD */
 /*CART CARD*/
 @-webkit-keyframes cart {
@@ -982,7 +988,7 @@ hr {
 
 .alert__success {
   background-color: rgb(3, 255, 137);
-  position: relative;
+  position: absolute;
 }
 
 /*javascript added classes*/
@@ -1272,24 +1278,24 @@ input[type=number] {
 .collection {
   display: grid;
   grid-template-columns: 0.8fr 1fr;
+  margin: 0 auto;
   height: 50vh;
   background-color: #ffe53b;
-  background-image: linear-gradient(147deg, #3bff93 0%, #5f25ff 74%);
+  background-image: linear-gradient(147deg, hsl(26deg, 100%, 55%) 0%, hsl(26deg, 100%, 44%) 74%);
   overflow: visible;
   max-width: 1370px;
+  border-radius: 0.5rem;
 }
-
 .collection h1 {
-  font-family: "Nerko One", cursive;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: left;
-  color: rgb(255, 230, 0);
+  color: rgb(252, 252, 252);
   margin-left: 3rem;
 }
 
 @media screen and (min-width: 1040px) {
   .collection h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 }
 /*parent container*/
@@ -1417,7 +1423,7 @@ input[type=number] {
   .collection {
     grid-template-columns: auto;
     grid-template-rows: 0.3fr 0.8fr;
-    height: 70vh;
+    height: 55vh;
     text-align: center;
   }
   .collection h1 {
