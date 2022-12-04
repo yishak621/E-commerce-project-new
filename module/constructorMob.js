@@ -32,7 +32,7 @@ class Gallery {
           SetMainImage(count);
         }
       }
-      console.log(count);
+
       //functionallity for small thumbnails
       this.smallImg = element.querySelector('.small-img');
 

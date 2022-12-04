@@ -2,14 +2,20 @@
 import getElement from './module/getElement.js';
 import Counter from './module/counter.js';
 import images from './module/array.js';
+//modal
 import Gallery from './module/constructorMob.js';
 import Modalgallery from './module/modal.js';
+//cart card
 import Card from './module/card.js';
-
+//dark mode
 import toggleBtn from './module/darkmode.js';
+//data array
 import { menArray, womenArray } from './module/data.js';
+//fixed nav
 import { scroll } from './module/fixedNavBar.js';
 import newwindow from './module/fixedNavBar.js';
+//country API
+import country from './module/checkout.js';
 
 //Declaration
 const menu = getElement('.menu__icon');

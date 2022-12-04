@@ -1,7 +1,7 @@
 const selectDrop = document.getElementById('countries');
 const url = 'https://restcountries.com/v2/all';
 
-window.addEventListener('DOMContentLoaded', async () => {
+export const country = window.addEventListener('DOMContentLoaded', async () => {
   const response = await fetch(url);
   const data = await response.json();
 
@@ -12,4 +12,4 @@ window.addEventListener('DOMContentLoaded', async () => {
   });
 });
 
-export default window;
+export default country;

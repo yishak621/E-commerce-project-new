@@ -1,6 +1,4 @@
-# Frontend Mentor - E-commerce product page solution
-
-This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+# Frontend Mentor - E-commerce product page solution by Yishak Abrham
 
 ## Table of contents
 
@@ -16,8 +14,6 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -30,23 +26,16 @@ Users should be able to:
 - Switch the large product image by clicking on the small thumbnail images
 - Add items to the cart
 - View the cart and remove items from it
+- by clicking the checkout they choose a payment method and order shipping
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](<./Screenshot%20(86).png>)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://ecommerceyis.netlify.app/](https://your-live-site-url.com)
 
 ## My process
 
@@ -54,62 +43,189 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
+- Flex
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- Javascript Module file components
+- [pure JS](https://vanillajs.org/) - vanilla JS
+- JS constructor function
+- [scss](https://styled-components.com/) - For styles
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
+Even if these type of E-commerce projects are done with frameworks to make life easier but i challenge myself to the extreme building the components by pure vanilla JS . the method that i use to make the whole project is using constructor functions as a component of JS since they will build the ahole functionality after i envoke it for any place i want ...for these trial project i build three sections in the html for collection ,Men and Women. the collection is the section where the user see what type of new products are avaliable in the website so i just hardecoded it in html only but for the other sections the innerHTML is dynamically added by JS after i iterate over a data Array(in a real world we use cloud storages for our items to be stored but in these case i host data locally).
+so as u can see in the index.html the sections will look like these
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<!--men section-->
+<section id="men">
+  <h1 class="section-title">Men shoes</h1>
+  <div class="men-section">
+    <!--filled by js-->
+  </div>
+</section>
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+
+in the JS we will load the innerHTML like these ,NOTE-the constructor function will recive two things one for section(that we want to invoke) and Array (array index of that section data)
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+//ADD ITEM FUNCTION
+function iterateOverArray(section, array) {
+  section.innerHTML = array
+    .map((eachArray) => {
+      const {
+        blockname,
+        mainImgSrc,
+        smallMenArray,
+        textClass,
+        companyName,
+        itemTitle,
+        description,
+        newOffer,
+        rate,
+        oldPrice,
+      } = eachArray;
+
+      return `
+  <!--start of single article-->
+<article class="main-section" >
+  <div class="${blockname}">
+    <!-- prev next buttons -->
+    <button class="icon-btn prev-btn prev-mob">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="icon-btn next-btn next-mob">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    <!--Main img -->
+    <picture class="gallery">
+      <img
+        class="main-img selected"
+        src="${mainImgSrc}"
+        alt="product"
+        data-id="0"
+      />
+    </picture>
+    <!--small tag image container-->
+    <div class="small-img">
+      <div class="image-wrapper selected" data-id="0">
+        <img
+          src="${smallMenArray.src1}"
+          alt="product-1"
+          class="img"
+          data-id="0"
+        />
+      </div>
+      <div class="image-wrapper" data-id="1">
+        <img
+          src="${smallMenArray.src2}"
+          alt="product-2"
+          class="img"
+          data-id="1"
+        />
+      </div>
+      <div class="image-wrapper" data-id="2">
+        <img
+          src="${smallMenArray.src3}"
+          alt="product-3"
+          class="img"
+          data-id="2"
+        />
+      </div>
+      <div class="image-wrapper" data-id="3">
+        <img
+          src="${smallMenArray.src4}"
+          alt="product-4"
+          class="img"
+          data-id="3"
+        />
+      </div>
+    </div>
+  </div>
+  <!--product text-->
+  <div class="product-text ${textClass}">
+    <h1>${companyName}</h1>
+    <h2 class="item__title">${itemTitle}</h2>
+    <p>
+      ${description}
+    </p>
+    <span class="price__tag"
+      ><span class="new__price"
+        ><span class="new__offer" data-value="${newOffer}">$${newOffer}</span>
+        <span class="rate">${rate}%</span></span
+      ><span class="old__price">$${oldPrice}</span></span
+    >
+    <div class="btn-flex">
+      <span class="counter"
+        ><button class="icon-btn counter-btn minus">
+          <i><img src="/images/icon-minus.svg" alt="minus" /></i>
+        </button>
+        <span class="number">0</span>
+        <button class="icon-btn counter-btn plus">
+          <i><img src="/images/icon-plus.svg" alt="plus" /> </i>
+        </button>
+      </span>
+      <button class="btn btn-cart">
+        <i><img src="./images/icon-cart.svg" alt="cart" /></i> Add to Cart
+      </button>
+    </div>
+  </div>
+</article>
+<!--end of single article-->
+`;
+    })
+    .join('');
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+i also added cool features like page loading GIF ,collection cards feature,Night mode,checkout page.
+for the checkout page in the country select input i use API to load countries and add them in to our select input
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+```js
+const selectDrop = document.getElementById('countries');
+const url = 'https://restcountries.com/v2/all';
+
+export const country = window.addEventListener('DOMContentLoaded', async () => {
+  const response = await fetch(url);
+  const data = await response.json();
+
+  let output = '';
+  data.forEach((countries) => {
+    output += `<option value="${countries.name}">${countries.name}</option>`;
+    selectDrop.innerHTML = output;
+  });
+});
+
+export default country;
+```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+the contiuned development that i want to work on E-commerce is using local storage to add item and then using that data whenever i want in the index.html page or another checkout page ...due to limited time i didn't do it now but i will do it soon..
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+```js
+const getStorageItem = (item) => {
+  let storageItem = localStorage.getItem(item);
+  if (storageItem) {
+    //if its true
+    storageItem = JSON.parse(localStorage.getItem(item));
+  } else {
+    storageItem = [];
+  }
+  return storageItem;
+}; //JSON.parse(from strings to object)
+const setStorageItem = (name, item) => {
+  localStorage.setItem(name, JSON.stringify(item));
+}; //JSON.stringify (from object to strings)
 
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+export { getStorageItem as getStore, setStorageItem as setStore };
+```
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [yishak abrham](https://app.netlify.com/teams/yishak621/overview)
+- Frontend Mentor - [@yishak621](https://www.frontendmentor.io/profile/yourusername)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+i want to thank you the frontend mentor for uploading the challenges and helpfull resources.

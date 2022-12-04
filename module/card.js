@@ -5,6 +5,11 @@ import { setStore, getStore } from './localStorage.js';
 class Card {
   constructor(element) {
     this.container = element;
+    //thumbnail selector for cart card
+    this.thumbNail = element.parentElement.firstChild.nextSibling;
+    this.thumbNailSelector = this.thumbNail.querySelector('.small-img');
+    this.thumbNailSrc =
+      this.thumbNailSelector.firstChild.nextSibling.querySelector('.img').src;
 
     //declaration for cart card
     const notification = getElement('.notification');
@@ -42,7 +47,7 @@ class Card {
 
       cartElement.innerHTML = ` <img
                     class="cart-price-img"
-                    src="./images/image-product-1-thumbnail.jpg"
+                    src="${this.thumbNailSrc}"
                     alt=""
                   /><span class="cart-span"
                     ><span class="cart-text"
