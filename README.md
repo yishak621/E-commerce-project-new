@@ -53,7 +53,7 @@ Users should be able to:
 
 ### What I learned
 
-Even if these type of E-commerce projects are done with frameworks to make life easier but i challenge myself to the extreme building the components by pure vanilla JS . the method that i use to make the whole project is using constructor functions as a component of JS since they will build the ahole functionality after i envoke it for any place i want ...for these trial project i build three sections in the html for collection ,Men and Women. the collection is the section where the user see what type of new products are avaliable in the website so i just hardecoded it in html only but for the other sections the innerHTML is dynamically added by JS after i iterate over a data Array(in a real world we use cloud storages for our items to be stored but in these case i host data locally).
+Even if these type of E-commerce projects are done with frameworks to make life easier but i challenge myself to the extreme building the components by pure vanilla JS . the method that i use to make the whole project is using constructor functions as a component of JS since they will build the a whole functionality after i envoke it for any place i want ...for these trial project i build three sections in the html for collection ,Men and Women. the collection is the section where the user see what type of new products are avaliable in the website so i just hardecoded it in html only but for the other sections the innerHTML is dynamically added by JS after i iterate over a data Array(in a real world we use cloud storages for our items to be stored but in these case i host data locally).
 so as u can see in the index.html the sections will look like these
 
 ```html
