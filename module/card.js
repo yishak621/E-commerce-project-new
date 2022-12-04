@@ -28,12 +28,10 @@ class Card {
 
     addCartBtn.forEach((cartBtn) => {
       cartBtn.addEventListener('click', () => {
-        if (value.textContent > 0) {
-          notification.classList.add('open');
-          emptyText.style.display = 'none'; //removing the text
-          notifyValue++;
-          notification.textContent = notifyValue;
-        }
+        notification.classList.add('open');
+        emptyText.style.display = 'none'; //removing the text
+        notifyValue++;
+        notification.textContent = notifyValue;
       });
     });
     //event listener for add to cart btn
