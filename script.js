@@ -92,7 +92,7 @@ function iterateOverArray(section, array) {
 
       return `
   <!--start of single article-->
-<article class="main-section" data-aos="fade-up">
+<article class="main-section" >
   <div class="${blockname}">
     <!-- prev next buttons -->
     <button class="icon-btn prev-btn prev-mob">
